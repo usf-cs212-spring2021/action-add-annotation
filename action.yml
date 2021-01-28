@@ -1,0 +1,31 @@
+name: 'Add Annotation'
+description: 'Github Action to add an annotation to a workflow run.'
+
+# https://octokit.github.io/rest.js/v18#checks-create
+
+inputs:
+  name:
+    description: 'Name of the check (regardless of outcome).'
+    required: true
+
+  title:
+    description: 'Text to include in the annotation title.'
+    required: true
+
+  summary:
+    description: 'Text to include in the annotation body.'
+    required: true
+
+  conclusion:
+    description: 'The conclusion (success, failure, neutral) of the annotation.'
+    required: true
+    default: 'neutral'
+
+  level:
+    description: 'The annotation level (notice, warning, or failure) to use.'
+    required: true
+    default: 'notice'
+
+runs:
+  using: 'node12'
+  main: 'index.js'

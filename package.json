@@ -1,0 +1,24 @@
+{
+  "name": "action-add-annotation",
+  "version": "1.0.0",
+  "description": "Github Action to add an annotation to a workflow run.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usf-cs212-spring2021/action-add-annotation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usf-cs212-spring2021/action-add-annotation/issues"
+  },
+  "homepage": "https://github.com/usf-cs212-spring2021/action-add-annotation#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
