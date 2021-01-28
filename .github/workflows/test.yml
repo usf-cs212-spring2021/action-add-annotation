@@ -1,0 +1,38 @@
+name: Add Annotation
+
+on:
+  workflow_dispatch
+
+jobs:
+  demo:
+    name: 'Demo'
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+
+    steps:
+      - name: Add Notice
+        uses: usf-cs212-spring2021/action-add-annotation@main
+        with:
+          name: 'Add Notice'
+          title: 'Notice Title'
+          summary: 'This demonstrates the notice annotation level.'
+          conclusion: 'success'
+          level: 'notice'
+
+      - name: Add Warning
+        uses: usf-cs212-spring2021/action-add-annotation@main
+        with:
+          name: 'Add Warning'
+          title: 'Warning Title'
+          summary: 'This demonstrates the warning annotation level.'
+          conclusion: 'cancelled'
+          level: 'warning'
+
+      - name: Add Failure
+        uses: usf-cs212-spring2021/action-add-annotation@main
+        with:
+          name: 'Add Failure'
+          title: 'Failure Title'
+          summary: 'This demonstrates the failure annotation level.'
+          conclusion: 'failure'
+          level: 'failure'
