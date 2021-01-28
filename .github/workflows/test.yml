@@ -5,7 +5,7 @@ on:
 
 jobs:
   demo:
-    name: 'Demo'
+    name: 'Demo Levels'
     runs-on: ubuntu-latest
     timeout-minutes: 1
 
@@ -13,6 +13,7 @@ jobs:
       - name: Add Notice
         uses: usf-cs212-spring2021/action-add-annotation@main
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: 'Add Notice'
           title: 'Notice Title'
           summary: 'This demonstrates the notice annotation level.'
@@ -22,6 +23,7 @@ jobs:
       - name: Add Warning
         uses: usf-cs212-spring2021/action-add-annotation@main
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: 'Add Warning'
           title: 'Warning Title'
           summary: 'This demonstrates the warning annotation level.'
@@ -31,6 +33,7 @@ jobs:
       - name: Add Failure
         uses: usf-cs212-spring2021/action-add-annotation@main
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: 'Add Failure'
           title: 'Failure Title'
           summary: 'This demonstrates the failure annotation level.'
